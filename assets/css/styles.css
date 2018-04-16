@@ -1,0 +1,7 @@
+#logoimg {
+  text-align: center;
+}
+#logoimg img {
+  display:inline-block;
+  margin:0 5px;
+}
