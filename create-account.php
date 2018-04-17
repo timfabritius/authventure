@@ -19,7 +19,7 @@
                                   if (!DB::query('SELECT email FROM users WHERE email=:email', array(':email'=>$email))) {
 
                                           DB::query('INSERT INTO users VALUES (\'\', :username, :password, :email)', array(':username'=>$username, ':password'=>password_hash($password, PASSWORD_BCRYPT), ':email'=>$email));
-                                          echo "Success!";
+                                          Header('Location: login.php');
                                   } else {
                                           echo 'Email in use!';
                                   }
@@ -61,13 +61,13 @@
 
 <body>
     <div class="login-dark">
-        <form method="post" class="bounce animated">
+        <form action="create-account.php" method="post">
             <h2 class="sr-only">Registeration Form</h2>
             <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
-            <div class="form-group"><input class="form-control" type="email" name="username" required="" placeholder="Username" maxlength="32" minlength="3"></div>
+            <div class="form-group"><input class="form-control" type="text" name="username" required="" placeholder="Username" maxlength="32" minlength="3"></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Create Account</button>
+            <div class="form-group"><button name="createaccount" class="btn btn-primary btn-block" type="submit">Create Account</button>
             <a class="btn btn-danger btn-block" role="button" href="login.php">Cancel</a></div>
         </form>
     </div>

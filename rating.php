@@ -7,7 +7,7 @@ if(isset($_POST['sendfeedback'])){
   if (strlen($feedback) >= 6 && strlen($feedback) <= 1000) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
       DB::query('INSERT INTO feedback VALUES (\'\', :email, :rating, :feedback)', array(':email'=>$email, ':rating'=>$rating, ':feedback'=>$feedback));
-      echo "Success!";
+      Header('Location: login.php');
     }else{
       echo "Invalid email";
     }
@@ -35,7 +35,7 @@ if(isset($_POST['sendfeedback'])){
 
 <body>
     <div class="login-dark">
-        <form method="post">
+        <form action="rating.php" method="post">
             <h2 class="sr-only">Feedback form</h2>
             <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>

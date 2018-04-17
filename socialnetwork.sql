@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16.04.2018 klo 13:47
+-- Generation Time: 17.04.2018 klo 14:15
 -- Palvelimen versio: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -42,7 +42,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `sender`, `rating`, `feedback`) VALUES
-(1, 'tc.fabritius@gmail.com', 5, 'Testing if working');
+(1, 'tc.fabritius@gmail.com', 5, 'Testing if working'),
+(2, 'tc.fabritius@gmail.com', 5, 'Testing');
 
 -- --------------------------------------------------------
 
@@ -55,6 +56,13 @@ CREATE TABLE `login_tokens` (
   `token` char(64) NOT NULL DEFAULT '',
   `user_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Vedos taulusta `login_tokens`
+--
+
+INSERT INTO `login_tokens` (`id`, `token`, `user_id`) VALUES
+(7, 'fc652aaf37d8e806dc26417c4b408d668e7f6842', 1);
 
 -- --------------------------------------------------------
 
@@ -127,19 +135,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `password_tokens`
 --
 ALTER TABLE `password_tokens`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`

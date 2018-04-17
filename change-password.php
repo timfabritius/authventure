@@ -1,6 +1,6 @@
 <?php
-include('./classes/DB.php');
-include('./classes/Login.php');
+include('classes/DB.php');
+include('classes/Login.php');
 $tokenIsValid = False;
 if (Login::isLoggedIn()) {
 
@@ -91,10 +91,12 @@ if (Login::isLoggedIn()) {
         <form action="<?php if (!$tokenIsValid) { echo 'change-password.php'; } else { echo 'change-password.php?token='.$token; } ?>" method="post">
             <h2 class="sr-only">Password Change Form</h2>
             <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
-            <?php if (!$tokenIsValid) { echo '<div class="form-group"><input class="form-control" type="password" name="oldpassword" required="" placeholder="Old password">'; } ?></div>
+            <?php if (!$tokenIsValid) {
+              echo '<div class="form-group"><input class="form-control" type="password" name="oldpassword" required="" placeholder="Old password"></div>';
+            } ?> 
             <div class="form-group"><input class="form-control" type="password" name="newpassword" required="" placeholder="New password"></div>
             <div class="form-group"><input class="form-control" type="password" name="newpasswordrepeat" required="" placeholder="New password repeat"></div>
-            <div class="form-group"><button name="changepassword" class="btn btn-primary btn-block" type="submit">Change Password</button></div>
+            <button name="changepassword" class="btn btn-primary btn-block" type="submit">Change Password</button>
             <a class="btn btn-danger btn-block" role="button" href="index.php">Cancel</a></div></div>
           </form>
     </div>
