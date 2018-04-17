@@ -16,8 +16,8 @@ INSTALLING
 ISSUES
 
 Please report ALL issues on our official pages below:
-Github https://github.com/timfabritius/auth-venture-beta
-Bitbucket https://bitbucket.org/timfabritius/auth-venture-beta/src/master/
+Github https://github.com/timfabritius/authventure
+Bitbucket https://bitbucket.org/timfabritius/authventure/
 
 FEEDBACK
 
