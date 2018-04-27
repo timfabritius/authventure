@@ -14,7 +14,7 @@ if (isset($_POST['resetpassword'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -33,7 +33,7 @@ if (isset($_POST['resetpassword'])) {
     <div class="login-dark">
         <form method="post" action="forgot-password.php">
             <h2 class="sr-only">Forgot Password Form</h2>
-            <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
+            <div class="illustration"><i><img src="logo.png" id="logoimg" alt="logo"></i></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
             <div class="form-group"><button name="resetpassword" class="btn btn-primary btn-block" type="submit">Get recovery link</button>
 
@@ -44,7 +44,7 @@ if (isset($_POST['resetpassword'])) {
             }
             ?>
 
-            <a class="btn btn-danger btn-block" role="button" href="index.php">Cancel</a></div></div>
+            <a class="btn btn-danger btn-block" role="button" href="index.php">Cancel</a></div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>

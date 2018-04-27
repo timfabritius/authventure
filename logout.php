@@ -28,7 +28,7 @@ if (isset($_POST['confirm'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -47,7 +47,7 @@ if (isset($_POST['confirm'])) {
     <div class="login-dark">
         <form action="logout.php" method="post">
             <h2 class="sr-only">Logout Form</h2>
-            <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
+            <div class="illustration"><i><img src="logo.png" id="logoimg" alt="logo"></i></div>
             <div class="form-group">
                 <div class="form-check"><input name="alldevices" value="alldevices" class="form-check-input" type="checkbox" id="formCheck-1" style="color:#214a80;font-size:20px;font-family:Raleway, sans-serif;font-weight:bold;background-color:#1e2833;background-position:left;background-size:cover;background-repeat:no-repeat;">
                     <label

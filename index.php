@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -31,7 +31,7 @@
     <div class="login-dark">
         <form method="post">
             <h2 class="sr-only">Services</h2>
-            <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
+            <div class="illustration"><i><img src="logo.png" id="logoimg" alt="logo"></i></div>
             <div class="form-group"><a class="btn btn-primary btn-block btn-lg" role="button" href="">Open service</a></div>
             <div class="form-group"><a class="btn btn-secondary btn-block btn-lg" role="button" href="change-password.php">Change password</a></div>
             <div class="form-group"><a class="btn btn-danger btn-block btn-lg" role="button" href="logout.php">Logout</a></div>

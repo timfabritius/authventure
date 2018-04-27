@@ -24,11 +24,11 @@
                           header('Location: index.php');
 
                   } else {
-                          echo 'Incorrect Password!';
+                          $errors = '<div class="alert alert-danger" role="alert">Incorrect password!</div>';
                   }
 
           } else {
-                  echo 'User not registered!';
+                  $errors = '<div class="alert alert-danger" role="alert">User not registered!</div>';
           }
 
   }
@@ -36,7 +36,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -55,7 +55,12 @@
     <div class="login-dark">
         <form class="align-self-center" action="login.php" method="post">
             <h2 class="sr-only">Login Form</h2>
-            <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
+            <div class="errors">
+              <?php if(isset($errors)){
+                echo $errors;
+              } ?>
+            </div>
+            <div class="illustration"><i><img src="logo.png" id="logoimg" alt="logo"></i></div>
             <div class="form-group"><input class="form-control" type="text" name="username" required="" placeholder="Username" maxlength="32" minlength="3"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
             <div class="form-group">
@@ -66,11 +71,13 @@
                 echo "<button class='btn btn-primary btn-block' name='login' type='submit'>Log In</button>";
               }
             ?>
+
           </div>
             <a href="forgot-password.php" class="forgot">Forgot your password?</a>
             <a href="rating.php" class="forgot" style="margin-top:16px;">Leave us feedback!</a>
             <a href="create-account.php" class="forgot" style="margin-top:16px;">Create account</a>
           </form>
+
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

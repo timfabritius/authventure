@@ -71,7 +71,7 @@ if (Login::isLoggedIn()) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -90,15 +90,15 @@ if (Login::isLoggedIn()) {
     <div class="login-dark">
         <form action="<?php if (!$tokenIsValid) { echo 'change-password.php'; } else { echo 'change-password.php?token='.$token; } ?>" method="post">
             <h2 class="sr-only">Password Change Form</h2>
-            <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
+            <div class="illustration"><i><img src="logo.png" id="logoimg" alt="logo"></i></div>
             <?php if (!$tokenIsValid) {
               echo '<div class="form-group"><input class="form-control" type="password" name="oldpassword" required="" placeholder="Old password"></div>';
-            } ?> 
+            } ?>
             <div class="form-group"><input class="form-control" type="password" name="newpassword" required="" placeholder="New password"></div>
             <div class="form-group"><input class="form-control" type="password" name="newpasswordrepeat" required="" placeholder="New password repeat"></div>
             <button name="changepassword" class="btn btn-primary btn-block" type="submit">Change Password</button>
-            <a class="btn btn-danger btn-block" role="button" href="index.php">Cancel</a></div></div>
-          </form>
+            <a class="btn btn-danger btn-block" role="button" href="index.php">Cancel</a>
+        </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

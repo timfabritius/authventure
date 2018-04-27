@@ -18,7 +18,7 @@ if(isset($_POST['sendfeedback'])){
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -37,11 +37,13 @@ if(isset($_POST['sendfeedback'])){
     <div class="login-dark">
         <form action="rating.php" method="post">
             <h2 class="sr-only">Feedback form</h2>
-            <div class="illustration"><i><img src="logo.png" id="logoimg"></i></div>
+            <div class="illustration"><i><img src="logo.png" id="logoimg" alt="logo"></i></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
             <div class="form-group"><input class="d-inline-block d-flex flex-row align-self-center mx-auto" type="range" name="rating" min="0" max="5" step="1" style="width:240px;font-size:22px;height:40px;margin-top:0px;padding-top:0;"></div>
             <div class="form-group"><textarea class="form-control form-control-lg" rows="4" name="feedback" placeholder="Write feedback here."></textarea></div>
-            <div class="form-group"><button name="sendfeedback" class="btn btn-primary btn-block" type="submit">Send feedback</button><button class="btn btn-danger btn-block" type="button">Cancel</button></div>
+            <div class="form-group"><button name="sendfeedback" class="btn btn-primary btn-block" type="submit">Send feedback</button>
+            <a class="btn btn-danger btn-block" role="button" href="login.php">Cancel</a>
+            </div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
